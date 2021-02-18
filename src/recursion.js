@@ -68,12 +68,33 @@ var isEven = function(n) {
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
 // sumBelow(7); // 21
+// sumBelow(-5) // -10
 var sumBelow = function(n) {
+  if (n === 0) {
+    return 0;
+  }
+
+  if (n > 0) {
+    return ((n + sumBelow(n - 1)) - 1);
+  } else {
+    return ((n + sumBelow(n + 1)) + 1);
+  }
 };
 
 // 6. Get the integers within a range (x, y).
 // range(2,9); // [3,4,5,6,7,8]
 var range = function(x, y) {
+  // input nums
+  // ouput array of nums in range
+  var result = [];
+
+  // base case
+  // when the number in the current call exceeds the range input
+
+  // recursive case
+  // when the number in the current call DOESN'T exceed the range input
+    // we have to generate a num in range and push that num into [] and call the func again
+
 };
 
 // 7. Compute the exponent of a number.
